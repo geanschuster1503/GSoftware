@@ -1,0 +1,95 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{web/fragmentos :: head}"></head>
+
+
+
+<body>
+<div th:replace="~{WEB/fragmentos :: menu}"></div>
+
+<form class="row w-25 formulario "   action="">
+<p class="navbar-brand mb-0 h2 text-primary" id="fraseLogin" >Faça seu Login</p>
+<div class="mb-3">
+  <label for="usuarioFormulario" class="form-label">Usuário:</label>
+  <input type="text" class="form-control" id="usuarioFormulario" placeholder="Digite seu Usuário...">
+</div>
+<div class="mb-3">
+  <label for="usuarioSenha" class="form-label">Senha:</label>
+  <input type="password" class="form-control" id="usuarioSenha" placeholder="Digite sua Senha...">
+</div>
+<div class="mb-3" >
+	<a class="btn btn-outline-primary" href="/usuario/novo" role="button"  >Criar Usuário</a>
+</div>
+
+<div class="d-grid gap-2">
+  <button class="btn btn-primary" type="button">Entrar</button>
+</div>
+</form>
+
+
+
+</body>
+
+
+
+
+<style type="text/css">
+body{
+
+background-color: #ebedf0;
+}
+
+.botaoVoltar:hover{
+
+background-color: #0055c8;
+color:white;
+}
+
+.formulario{
+margin:5% 0 0 35%;
+background-color: white;
+border-radius: 0.5rem;
+padding:1rem;
+height:25rem;
+
+}
+
+#fraseLogin{
+
+font-size:30px;
+font-family:sans-serif;
+text-decoration:none;
+text-align:center;
+font-weight: 600;
+padding: 0.5rem;
+
+
+}
+
+#titulo{
+
+font-size:30px;
+font-family:sans-serif;
+text-decoration:none;
+font-weight: 800;
+
+}
+
+.item_lista{
+
+font-size:30px;
+font-family:sans-serif;
+text-decoration:none;
+font-weight: 400;
+
+}
+
+.modal{
+	width: 30%;
+}
+
+.modal-content{
+	width: 30%;	
+}
+</style>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{web/fragmentos :: head}"></head>
+
+
+<body>
+
+<div th:replace="~{WEB/fragmentos :: menu}"></div>
+
+	<form id="formulario"  action="/usuario/salvar" method="POST" class=" row g-3 formulario">
+		<p class="navbar-brand mb-0 h2 text-primary" id="fraseLogin">Cadastre seu usuário</p>
+
+
+
+		  <div class="">
+    		<label for="validationServerUsername" class="form-label">Usuário</label>
+    			<div class="input-group has-validation">
+      				<span class="input-group-text" id="inputGroupPrepend3">@</span>
+      					<input type="text" name="nome" class="form-control is-invalid" id="" placeholder="Crie seu Usuário..." required>
+    			</div>
+  			</div>
+
+
+		<div class="">
+			<label  class="form-label">E-mail:</label>
+			<input type="email" name="email" class="form-control" placeholder="Digite seu E-mail...">
+		</div>
+
+		<div class="">
+			<label   class="form-label">Senha:</label>
+			<input type="password" name="senha" class="form-control" id="inputSenha"  placeholder="Crie sua Senha...">
+
+		</div>
+
+		<div class="">
+			<label class="form-label">Confirmesua Senha:</label> 
+			<input type="password" name="confirmaSenha" class="form-control " placeholder="Confirme sua Senha...">
+
+		</div>
+
+
+
+		<div class="d-flex flex-column mt-2 gap-4">
+			<input id="inputSalvar" class="btn  w-100 btn-lg btn-success" type="submit" value="Salvar" >
+			<a type="button" href="/index" class="btn w-100 btn-lg btn-light border">Voltar</a>
+		</div>
+
+	</form>
+	<script type="text/javascript">
+	
+	
+	const inputSalvar = document.querySelector("#inputSalvar");
+	
+	inputSalvar.addEventListener("click", function(e){
+		
+		
+		e.preventDefault();
+		
+		
+	})
+	
+	
+// 	const inputSenha = document.querySelector("#inputSenha");
+	
+// 	const value = inputSenha.value;
+		
+
+	</script>
+	
+</body>
+
+
+
+
+
+<style type="text/css">
+
+
+
+body{
+
+background-color: #ebedf0;
+}
+
+
+
+.formulario{
+margin:3% 0 0 35%;
+background-color: white;
+border-radius: 0.5rem;
+padding:1rem;
+height:40rem;
+width:30rem;
+}
+
+
+
+#fraseLogin{
+
+font-size:30px;
+font-family:sans-serif;
+text-decoration:none;
+text-align:center;
+font-weight: 600;
+padding: 0.5rem;
+
+
+}
+
+#titulo{
+
+font-size:30px;
+font-family:sans-serif;
+text-decoration:none;
+font-weight: 800;
+
+}
+
+.item_lista{
+
+font-size:30px;
+font-family:sans-serif;
+text-decoration:none;
+font-weight: 400;
+
+}
+
+.modal{
+	width: 30%;
+}
+
+.modal-content{
+	width: 30%;	
+}
+</style>
+</html>

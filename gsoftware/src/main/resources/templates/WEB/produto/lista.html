@@ -1,0 +1,97 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{web/fragmentos :: head}"></head>
+
+<body>
+<div th:replace="~{WEB/fragmentos :: menu}"></div>
+
+<div class="table-responsive">
+	<h2 class="tituloProduto text-primary">Produtos</h2>
+	<table class="table table-bordered   bg-light w-50 "> 
+		<thead>
+			<tr>
+				<th class="linhaTabelaId  text-center" >Id</th>
+				<th class="linhaTabelaNome" >Nome</th>
+				<th class="linhaTabelaDescricao" >Descrição</th>
+				<th class=" linhaTabelaIcon"><a class="btn btn-success btn-sm " href="/produto/novo" role="button" >Novo</a></th>	
+			</tr>
+		</thead>
+			<tbody>
+				<tr th:each="produto : ${produto}">
+					<td class="text-center"  th:text="${produto.getId()}"> </td>
+					<td  th:text="${produto.getNome()}"> </td>
+					<td  th:text="${produto.getDescricao()}"> </td>
+					<td class="linhaTabelaIcon d-flex justify-content-between ">
+						<a class="btn btn-primary btn-sm" th:href="@{/produto/{id}/editar (id = ${produto.getId})}" role="button" >Editar</a>
+						<a class="btn btn-outline-primary " th:href="@{/produto/{id} (id = ${produto.id})}"  role="button" > 👁‍🗨</a>
+					</td>
+					
+				</tr>
+			</tbody>
+	</table>
+</div>
+</body>
+
+
+
+
+<style type="text/css">
+body{
+
+background-color: #ebedf0;
+}
+
+
+
+table{
+
+margin:1% 0 0 25%;
+
+
+}
+
+.linhaTabelaIcon{
+
+text-align: center;
+width: 8rem;
+
+}
+
+#titulo {
+	font-size: 30px;
+	font-family: sans-serif;
+	text-decoration: none;
+	font-weight: 800;
+}
+.linhaTabelaNome{
+
+width:20rem;
+}
+
+.linhaTabelaId{
+width:5rem;
+}
+
+.tituloProduto{
+font-size:30px;
+font-family:sans-serif;
+text-decoration:none;
+font-weight: 800;
+margin:5% 0 0 25%;
+
+
+}
+
+
+.item_lista{
+
+font-size:30px;
+font-family:sans-serif;
+text-decoration:none;
+font-weight: 400;
+
+}
+
+
+</style>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Software</title>
+<head th:replace="~{web/fragmentos :: head}"></head>
+
+<body>
+<div th:replace="~{WEB/fragmentos :: menu}"></div>
+
+<form id="formulario" action="/produto/novo" method="post" class="w-50 row g-3">
+<span class="navbar-brand mb-0 h1 text-primary "  id="titulo">Cadastrar Produto</span>
+
+  <div class="col-md-6">
+    <label for="inputNome" class="form-label">Nome</label>
+    <input type="text" name="nomeProduto" class="form-control" id="inputNome">
+  </div>
+  
+  <div class="col-md-6">
+    <label for="inputCodigoProduto" class="form-label">Código do Produto</label>
+    <input type="number" class="form-control" id="inputCodigoProduto">
+  </div>
+  
+  <div class="col-md-2">
+    <label for="inputQuantidade" class="form-label">Quantidade</label>
+    <input type="number" class="form-control" id="inputQuantidade">
+  </div>
+  
+  <div class="col-md-6">
+    <label for="inputPreco" class="form-label">Preço</label>
+    <input type="number" class="form-control" id="inputPreco">
+  </div>
+  <div class="col-md-4">
+    <label for="inputDataEntrada" class="form-label">Data Entrada</label>
+    <input type="datetime-local" class="form-control" id="inputDataEntrada">
+  </div>
+  
+  <div class="col-md-4 " >
+    <label for="descricao" class="form-label">Descrição</label>
+   
+    <div class="caixaDescricao">
+    <textarea class="form-control" id="descricao" ></textarea>
+     <button id="botaoCadastrar" type="submit" class="btn btn-primary">Cadastrar</button>
+     </div>
+     
+  </div>
+ 
+
+ 
+</form>
+
+</body>
+
+
+
+
+<style type="text/css">
+body{
+
+background-color: #ebedf0;
+}
+
+.botaoVoltar:hover{
+
+background-color: #0055c8;
+color:white;
+}
+
+.caixaDescricao{
+
+display: flex;
+
+}
+
+#botaoCadastrar{
+position: relative;
+margin-left: 8rem;
+
+}
+
+#formulario{
+margin:5% 0 0 25%;
+background-color: white;
+border-radius: 0.5rem;
+padding:1rem;
+height:28rem;
+padding-bottom:2rem;
+}
+
+#descricao{
+
+max-height: 4rem;
+min-height:4rem; 
+max-width: 25rem;
+min-width: 25rem;
+
+}
+
+#titulo{
+
+font-size:30px;
+font-family:sans-serif;
+text-decoration:none;
+font-weight: 800;
+
+}
+
+.item_lista{
+
+font-size:30px;
+font-family:sans-serif;
+text-decoration:none;
+font-weight: 400;
+
+}
+
+.modal{
+	width: 30%;
+}
+
+.modal-content{
+	width: 30%;	
+}
+</style>
+</html>
